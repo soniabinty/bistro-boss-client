@@ -1,6 +1,6 @@
 import React from 'react';
-import img from '../../assets/home/featured.jpg'
-import Heading from '../../Shared/Heading';
+import img from '../../../assets/home/featured.jpg'
+import Heading from '../../../Shared/Heading';
 const Feature = () => {
   return (
     <div

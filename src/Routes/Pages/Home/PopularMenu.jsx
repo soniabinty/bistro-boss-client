@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Heading from '../../Shared/Heading';
+import Heading from '../../../Shared/Heading';
 
-import MenuItem from '../../Shared/MenuItem';
+import MenuItem from '../../../Shared/MenuItem';
 
 const PopularMenu = () => {
 
