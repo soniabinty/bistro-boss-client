@@ -5,12 +5,16 @@ import OrderMenu from './OrderMenu.jsx'
 import PopularMenu from './PopularMenu.jsx'
 import Feature from './Feature.jsx'
 import Testimonial from "./Testimonial.jsx";
-import Footer from "../../../Shared/Footer.jsx";
 
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
   return (
     <div>
+<Helmet>
+  <title> Bistro Boss Resturant | Home</title>
+ 
+</Helmet>
       <Banner></Banner>
    <OrderMenu></OrderMenu>
       <ItemOne></ItemOne>
@@ -19,7 +23,7 @@ const Home = () => {
    
      <Feature></Feature>
      <Testimonial></Testimonial>
-     <Footer></Footer>
+  
       
     </div>
   );
