@@ -3,6 +3,7 @@ import Cover from '../../../Shared/Cover';
 import img from '../../../assets/menu/dessert-bg.jpeg'
 import UseMenu from '../Hooks/UseMenu';
 import MenuItem from '../../../Shared/MenuItem';
+import { Link } from 'react-router-dom';
 const Desert = () => {
   const [menu ] = UseMenu()
    
@@ -23,7 +24,9 @@ const Desert = () => {
  </MenuItem>)
 }
 </div>
+<Link to={'/order/desserts'}>
 <button className=' text-center uppercase border-0 mx-auto  btn-outline border-b-4 btn w-1/4 '>ORDER YOUR FAVOURITE FOOD</button>
+</Link>
 </div>
     </div>
   );

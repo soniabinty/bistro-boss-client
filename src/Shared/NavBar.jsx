@@ -15,6 +15,12 @@ const NavBar = () => {
 
   </NavLink>
  </li>
+
+ <li > 
+     <NavLink  to={'/order'}>Ordered Food
+
+  </NavLink>
+ </li>
  </>
   return (
     <div className="navbar z-10 fixed max-w-screen-xl text-white bg-black bg-opacity-30">
