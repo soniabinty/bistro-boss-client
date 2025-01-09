@@ -24,7 +24,7 @@ const Desert = () => {
  </MenuItem>)
 }
 </div>
-<Link to={'/order/desserts'}>
+<Link to={'/order/dessert'}>
 <button className=' text-center uppercase border-0 mx-auto  btn-outline border-b-4 btn w-1/4 '>ORDER YOUR FAVOURITE FOOD</button>
 </Link>
 </div>

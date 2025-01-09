@@ -3,6 +3,7 @@ import UseMenu from '../Hooks/UseMenu';
 import Cover from '../../../Shared/Cover';
 import MenuItem from '../../../Shared/MenuItem';
 import img from '../../../assets/menu/pizza-bg.jpg'
+import { Link } from 'react-router-dom';
 const Pizza = () => {
   const [menu ] = UseMenu()
    
@@ -23,7 +24,10 @@ const Pizza = () => {
  </MenuItem>)
 }
 </div>
+
+<Link to={'/order/pizza'}>
 <button className=' text-center uppercase border-0 mx-auto  btn-outline border-b-4 btn w-1/4 '>ORDER YOUR FAVOURITE FOOD</button>
+</Link>
 </div>
     </div>
   );
