@@ -3,10 +3,12 @@ import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import AuthContext from '../../provider/AuthContext';
+import useAxiosPublic from './Hooks/useAxiosPublic';
 
 const SignUp = () => {
 const navigate = useNavigate()
   const{createUser ,updateProfileUser} = useContext(AuthContext)
+  const axiosPublic = useAxiosPublic()
   const {
     register,
     handleSubmit,
@@ -23,7 +25,14 @@ const navigate = useNavigate()
       console.log(user)
       updateProfileUser(data.name , data.photo)
       .then(() =>{
-        console.log('updated')
+
+        const userInfo = {
+          name : data.name,
+          email : data.email
+        }
+       
+axiosPublic.post('/users' , userInfo)
+
         reset()
         navigate('/')
       })

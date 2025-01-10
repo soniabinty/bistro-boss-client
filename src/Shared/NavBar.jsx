@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
-import {  NavLink } from 'react-router-dom';
+import {  Link, NavLink } from 'react-router-dom';
 import AuthContext from '../provider/AuthContext';
+import { IoMdCart } from 'react-icons/io';
+import useCart from '../Routes/Pages/Hooks/useCart';
 
 const NavBar = () => {
   const {user ,signOutUser} = useContext(AuthContext)
-
+const [carts] = useCart()
   const handleLogout = () =>{
     signOutUser()
   }
@@ -78,7 +80,10 @@ const NavBar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+  <Link to={'/dashboard/cart'} className="flex gap-2 items-center btn">
+  <IoMdCart />
+  <div className="badge badge-secondary">{carts.length}</div>
+</Link>
   </div>
 </div>
   );
